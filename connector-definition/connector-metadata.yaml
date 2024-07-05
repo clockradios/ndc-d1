@@ -1,0 +1,20 @@
+packagingDefinition:
+  type: PrebuiltDockerImage
+  dockerImage: ghcr.io/hasura/ndc-d1:v0.0.1
+supportedEnvironmentVariables:
+  - name: CF_ACCOUNT_ID
+    description: The CloudFlare Account ID
+  - name: D1_DATABASE_ID
+    description: The ID of the d1 database
+  - name: CF_BEARER_TOKEN
+    description: The CloudFlare auth token
+commands:
+  update:
+    type: Dockerized
+    dockerImage: ghcr.io/hasura/ndc-d1:v0.0.1
+    commandArgs:
+      - update
+dockerComposeWatch:
+  - path: ./
+    target: /etc/connector
+    action: sync+restart

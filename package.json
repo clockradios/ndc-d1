@@ -1,0 +1,26 @@
+{
+    "name": "ndc-turso",
+    "version": "0.0.15",
+    "main": "index.js",
+    "author": "Tristen Harr",
+    "scripts": {
+        "start": "ts-node ./src/index.ts serve --configuration=.",
+        "generate-config": "ts-node generate-config"
+    },
+    "dependencies": {
+        "@hasura/ndc-sdk-typescript": "^4.5.0",
+        "@json-schema-tools/meta-schema": "^1.7.0",
+        "@libsql/client": "^0.5.6",
+        "@types/node": "^20.6.0",
+        "axios": "^1.7.2",
+        "sqlstring-sqlite": "^0.1.1",
+        "ts-node": "^10.9.1"
+    },
+    "devDependencies": {
+        "@types/node": "^16.18.50",
+        "sql-formatter": "^13.0.0",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.9.5",
+        "typescript-json-schema": "^0.62.0"
+    }
+}
