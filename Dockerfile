@@ -44,7 +44,9 @@ ENV HASURA_CONNECTOR_PORT=8080
 EXPOSE $HASURA_CONNECTOR_PORT
 
 # Copy the entrypoint script into the container and make it executable
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY ./entrypoint.sh /usr/local/bin/entrypoint.sh
+
+RUN ls -l /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # Use the entrypoint script to handle startup and signal trapping

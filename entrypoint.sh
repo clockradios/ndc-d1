@@ -26,8 +26,8 @@ case "$1" in
     update)
         shift # Remove the first argument from the arguments list
         run_update "$@"
-        ;;
+    ;;
     *)
         start_application "$@"
-        ;;
+    ;;
 esac
